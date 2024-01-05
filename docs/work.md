@@ -7,7 +7,7 @@ permalink: /work/
 layout: page
 ---
 
-![BBC: The Trap](/media/bbc-the-trap){: width="250" }
+![BBC: The Trap](/media/bbc-the-trap.jpg){: width="250" }
 
 I worked as a researcher for the BBC World Service documentary "The Trap." The documentary exposes the fraudulent loan app ecosystem in India.
 
