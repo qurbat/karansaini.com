@@ -6,6 +6,13 @@ author: Karan Saini
 permalink: /work/
 layout: page
 ---
+
+![BBC: The Trap](/media/bbc-the-trap){: width="250" }
+
+I worked as a researcher for the BBC World Service documentary "The Trap." The documentary exposes the fraudulent loan app ecosystem in India.
+
+The documentary <a href="https://www.youtube.com/watch?v=JilJhn_tP-c">can be accessed here.</a>
+
 ![ecobotnet](/media/eco-bot.png){: width="250" }
 
 Eco-Bot.net is a net-art project which seeks to reveal the hidden ecosystem of climate change disinformation on social media. I was responsible for developing the social media automation components of the project.
