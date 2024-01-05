@@ -9,9 +9,9 @@ layout: page
 
 ![BBC: The Trap](/media/bbc-the-trap.jpg){: width="250" }
 
-I worked as a researcher for the BBC World Service documentary "The Trap." The documentary exposes the fraudulent loan app ecosystem in India.
+The BBC World Service documentary "The Trap" exposes the fraudulent loan app ecosystem in India. I worked as a researcher for this project.
 
-The documentary <a href="https://www.youtube.com/watch?v=JilJhn_tP-c">can be accessed here.</a>
+The documentary <a href="https://www.youtube.com/watch?v=JilJhn_tP-c">is available to watch here.</a>
 
 ![ecobotnet](/media/eco-bot.png){: width="250" }
 
