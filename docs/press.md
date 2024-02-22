@@ -1,11 +1,17 @@
 ---
-title: Security
+title: Press
 date: 2021-09-17T05:08:15+05:30
 author: Karan Saini
-permalink: /security/
+permalink: /press/
 layout: page
 ---
 This page includes links to news articles and other media documenting my work.
+
+## Internet Censorship
+["Blocking websites is secret in India, now researchers are probing Airtel and ACT networks to reveal details" - **December 7, 2021** - indiatoday.in](https://www.indiatoday.in/technology/features/story/blocking-websites-is-secret-in-india-now-researchers-are-probing-airtel-and-act-networks-to-reveal-details-1885025-2021-12-07)
+
+While the government and telecom companies drag their feet on bringing transparency on how websites are blocked in India, security and legal researchers are probing ISP networks to figure out some details.
+
 ## Application Security
 
 ["Researcher Uncovered Serious Flaw in Delhi Police Digital Infrastructure" - **June 25, 2020** - gadgets.ndtv.com](https://gadgets.ndtv.com/internet/news/dehli-police-digital-vulnerability-patched-bengaluru-researcher-2252068)
