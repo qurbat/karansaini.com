@@ -7,7 +7,7 @@ layout: page
 ---
 
 ![cashless consumer](/media/cashless-consumer.png){: width="250" }
-In February 2023, I delivered a talk for Cashless Consumer about [upi-recon](https://github.com/qurbat/upi-recon), which is a tool I built to extract publicly available metadata from Unified Payments Interface (UPI) addresses.
+In February 2023, I delivered a talk for Cashless Consumer about [upi-recon](https://github.com/qurbat/upi-recon), tool I had built for extracting metadata from Unified Payments Interface (UPI) payment addresses.
 
 Footage of this talk <a href="https://hasgeek.com/cashlessconsumer/upi-recon-using-upi-as-osint-tool/schedule/upi-recon-upi-payment-address-discovery-and-reconnaissance-4moXYnJjtc9DD5QZyneytb">is available here.</a>
 
