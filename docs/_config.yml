@@ -32,7 +32,7 @@ remote_theme: b2a3e8/jekyll-theme-console
 
 header_pages:
   - index.md
-  - security.md
+  - press.md
   - work.md
   - media.md
 #  - writing.md
