@@ -2,12 +2,13 @@
 # Front matter required so Jekyll runs this through Sass.
 ---
 
-// Override the theme's defaults via @use ... with (...). Both vars are
-// declared with !default in the theme's _sass/base.scss.
-@use "base" with (
-  $base-font-size:   16px,
-  $mobile-font-size: 15px,
-);
-@use "light";
+// Override the theme's defaults. Both vars are declared with !default
+// in the theme's _sass/base.scss, so setting them before @import takes effect.
+// Use @import (not @use) for compatibility with GitHub Pages (libsass).
+$base-font-size:   16px;
+$mobile-font-size: 15px;
 
-@include light.theme();
+@import "light";
+@import "base";
+
+@include theme();
