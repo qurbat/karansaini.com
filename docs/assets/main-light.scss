@@ -1,0 +1,13 @@
+---
+# Front matter required so Jekyll runs this through Sass.
+---
+
+// Override the theme's defaults via @use ... with (...). Both vars are
+// declared with !default in the theme's _sass/base.scss.
+@use "base" with (
+  $base-font-size:   16px,
+  $mobile-font-size: 15px,
+);
+@use "light";
+
+@include light.theme();

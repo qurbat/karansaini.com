@@ -30,6 +30,13 @@ github_username: qurbat
 markdown: kramdown
 remote_theme: b2a3e8/jekyll-theme-console
 
+# Silence Sass @import deprecation warnings from the remote theme's stylesheets.
+# The theme uses @import (now deprecated in Dart Sass), and it isn't ours to fix.
+sass:
+  quiet_deps: true
+  silence_deprecations:
+    - import
+
 header_pages:
   - index.md
   - press.md
@@ -64,3 +71,4 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
