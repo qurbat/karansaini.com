@@ -7,6 +7,12 @@ permalink: /work/
 layout: page
 ---
 
+![dnsblocks.in](/media/dnsblocks.png){: height="200" }
+
+The "Poisoned Wells" report measures the scale of DNS censorship in India. I carried out the research and wrote the report for this project.
+
+The project report and data is available at <a href="https://dnsblocks.in">dnsblocks.in</a>.
+
 ![BBC: The Trap](/media/bbc-the-trap.jpg){: width="250" }
 
 The BBC World Service documentary "The Trap" exposes the fraudulent loan app ecosystem in India. I worked as a researcher on this project.
