@@ -9,7 +9,7 @@ layout: page
 
 ![dnsblocks.in](/media/dnsblocks.png){: height="200" }
 
-The "Poisoned Wells" report measures the scale of DNS censorship in India. I carried out the research and wrote the report for this project.
+The "Poisoned Wells" project measures the scale of DNS censorship in India. I carried out the research and wrote the report for this project.
 
 The project report and data is available at <a href="https://dnsblocks.in">dnsblocks.in</a>.
 

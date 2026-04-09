@@ -8,6 +8,10 @@ layout: page
 This page includes links to news articles and other media documenting my work.
 
 ## Internet Censorship
+["Study flags inconsistent website-blocking practices by Indian internet providers" - **March 4, 2026** - thehindu.com](https://www.thehindu.com/incoming/studyflags-inconsistent-website-blocking-practices-byindian-internet-providers/article70696425.ece)
+
+In report supported by the Open Technology Fund, researcher Karan Saini observes that internet providers have little consensus when it comes to web blocking.
+
 ["Blocking websites is secret in India, now researchers are probing Airtel and ACT networks to reveal details" - **December 7, 2021** - indiatoday.in](https://www.indiatoday.in/technology/features/story/blocking-websites-is-secret-in-india-now-researchers-are-probing-airtel-and-act-networks-to-reveal-details-1885025-2021-12-07)
 
 While the government and telecom companies drag their feet on bringing transparency on how websites are blocked in India, security and legal researchers are probing ISP networks to figure out some details.
