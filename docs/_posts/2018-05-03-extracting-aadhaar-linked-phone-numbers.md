@@ -64,11 +64,9 @@ Discovery of the five unknown digits can be automated with the use of a script, 
   To reiterate; the script or tool would query any of the vulnerable websites repeatedly to extract the full phone number pertaining to any given Aadhaar.
 </p>
 
-The video below demonstrates this process through the use of Burp Suite &#8211; which is another intercepting proxy capable of sending automated requests.<figure class="wp-block-embed">
+The video below demonstrates this process through the use of Burp Suite &#8211; which is another intercepting proxy capable of sending automated requests.
 
-<div class="wp-block-embed__wrapper">
-  https://www.youtube.com/watch?v=obbJEvy6h0M
-</div></figure> 
+Note (May 2026): The video referenced above is no longer available.
 
 In the video above, the valid phone number combination can be distinguished on the basis of its response length. A response length of 8081 signifies a match, as opposed to a response length of 1389 or 1375 which signifies an authentication failure.
 
