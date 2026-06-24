@@ -67,10 +67,6 @@ Its use as an effective law enforcement tool is overstated, while the underlying
 
 UIDAI's statements should be seen for what they truly are: hopeless attempts at damage control for a system that is crumbling at its very foundation.
 
-["Selling Aadhaar: What the UIDAI's advertisements don't tell you" - **August 23, 2018** - thewire.in](https://thewire.in/rights/aadhaar-advertisements-identity-citizenship-rights)
-
-The idea of one's own identity is sold through curated advertisements where inclusion, identity and access are conditionally granted through Aadhaar, and not by default. Co-written with Anandita Thakur.
-
 ["Aadhaar remains an unending security nightmare for a billion Indians" - **May 11, 2018** - thewire.in](https://thewire.in/government/aadhaar-remains-an-unending-security-nightmare-for-a-billion-indians)
 
 The legal battle may have drawn to a close, but when it comes to data concerns, authorities can no longer afford to pass around blame or deny security breaches.
