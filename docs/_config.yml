@@ -41,8 +41,8 @@ header_pages:
   - index.md
   - press.md
   - work.md
+  - writing.md
   - media.md
-#  - writing.md
 
 style: light
 footer: 'Find me on <a href="https://x.com/squeal">X</a> or <a rel="me" href="https://bsky.app/profile/karansaini.com">Bluesky</a>. Writing on <a href="https://muckrack.com/karan-saini">Muck Rack</a>.'
