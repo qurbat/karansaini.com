@@ -7,6 +7,10 @@ layout: page
 ---
 A selection of articles I have written for various publications.
 
+["E-rickshaw battery 'hacks' and Bluetooth BMS vulnerabilities, explained" - **July 6, 2026** - thehindu.com](https://www.thehindu.com/sci-tech/technology/e-rickshaw-battery-hacks-and-bluetooth-bms-vulnerabilities-explained/article71188599.ece)
+
+The misuse of battery management apps exposed security flaws in imported e-rickshaw battery systems, rather than problems with the apps themselves; stronger supply chain oversight and security standards, not app bans, are needed to address such vulnerabilities.
+
 ["India's cyber vulnerabilities begin long before a breach" - **June 20, 2026** - deccanherald.com](https://www.deccanherald.com/india/indias-cyber-vulnerabilities-begin-long-before-a-breach-4046682)
 
 The CBSE-OSM controversy exposes deeper faults in how India approaches cybersecurity audits, procurement and institutional accountability.
