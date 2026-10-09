@@ -6,6 +6,8 @@ excerpt: An application with the CALL_PHONE permission can execute carrier MMI/U
 layout: post
 permalink: /mmi-android/
 image: /media/1-click-mmi-card.png
+twitter:
+  card: summary
 categories:
   - Security
 tags:
