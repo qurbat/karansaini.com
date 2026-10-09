@@ -1,0 +1,78 @@
+/**
+ * Code blocks
+ *
+ * The theme renders `pre` with the page background, no border, no padding and
+ * the body font size, so a code block is indistinguishable from prose apart
+ * from its syntax colours. These rules give it a container, set it a size of
+ * its own, and make horizontal overflow visible rather than silently clipped.
+ */
+
+// Inline code.
+code {
+  font-family: "Source Code Pro", monospace;
+  font-size: 0.925em;
+  padding: 0.1em 0.3em;
+  background-color: rgba(0, 0, 0, 0.055);
+  border-radius: 2px;
+  word-break: break-word;
+}
+
+// Block container. Kramdown and Rouge emit
+// div.highlighter-rouge > div.highlight > pre.highlight > code
+.highlighter-rouge {
+  margin: 20px 0;
+}
+
+div.highlight,
+figure.highlight {
+  margin: 0;
+  border: var(--border);
+  background-color: rgba(0, 0, 0, 0.025);
+  overflow: hidden; // keep the border square around the scrolling area
+}
+
+div.highlight pre,
+pre.highlight {
+  margin: 0;
+  padding: 12px 14px;
+  background-color: transparent;
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+}
+
+// A long line scrolls; it must not wrap, since the intent: URIs below would be
+// unreadable broken across lines.
+div.highlight pre code,
+pre.highlight code {
+  padding: 0;
+  border-radius: 0;
+  background: none;
+  font-size: inherit;
+  white-space: pre;
+}
+
+// Show the scrollbar rather than leaving it as an overlay that only appears
+// mid-gesture, so it is apparent that a line continues past the right edge.
+div.highlight pre::-webkit-scrollbar {
+  height: 8px;
+}
+
+div.highlight pre::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+div.highlight pre::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+@media only screen and (max-device-width: 500px) {
+  div.highlight pre,
+  pre.highlight {
+    padding: 10px 11px;
+    font-size: 13px !important;
+  }
+}

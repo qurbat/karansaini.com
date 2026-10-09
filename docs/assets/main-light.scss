@@ -12,3 +12,7 @@ $mobile-font-size: 15px;
 @import "base";
 
 @include theme();
+
+@import "code";
+@import "images";
+
