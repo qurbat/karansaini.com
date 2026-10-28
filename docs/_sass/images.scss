@@ -17,3 +17,10 @@ main img {
 main p:has(> img) {
   text-align: center;
 }
+
+// Work page thumbnails: cap the height so tall images don't dominate the
+// list. width: auto keeps the aspect ratio when the cap kicks in.
+main img.work-img {
+  max-height: 200px;
+  width: auto;
+}
