@@ -18,9 +18,98 @@ main p:has(> img) {
   text-align: center;
 }
 
-// Work page thumbnails: cap the height so tall images don't dominate the
-// list. width: auto keeps the aspect ratio when the cap kicks in.
-main img.work-img {
-  max-height: 200px;
+// Media/Work entries: square thumbnail on the left, text on the right.
+// The image paragraph spans every row in column 1; text paragraphs go to
+// column 2. object-fit crops each image to fill the square.
+main .entry {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  column-gap: 20px;
+  align-items: start;
+  margin-bottom: 30px;
+}
+
+main .entry > p:first-child {
+  grid-row: 1 / span 10;
+  margin: 0;
+}
+
+main .entry > p:not(:first-child) {
+  grid-column: 2;
+}
+
+main .entry img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin: 0;
+}
+
+// Wide entries (Work page): posters, stills and covers come in mixed shapes,
+// so show each image whole and centre the text vertically against it.
+main .entry.wide {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+// Separate consecutive entries with a centred rule of short dashes.
+// Drawn as a background so it doesn't become a flex item.
+main .entry.wide + .entry.wide {
+  padding-top: 24px;
+  background: repeating-linear-gradient(to right, var(--base-color) 0 5px, transparent 5px 10px)
+    top center / 80% 1px no-repeat;
+}
+
+main .entry.wide > p:first-child {
+  flex: 0 0 200px;
+}
+
+// The height cap only bites on tall images (the poster), which then narrow
+// to keep their shape.
+main .entry.wide img {
   width: auto;
+  max-width: 200px;
+  max-height: 230px;
+  height: auto;
+  object-fit: initial;
+}
+
+main .entry-text {
+  flex: 1;
+  min-width: 0;
+}
+
+// Drop the last paragraph's bottom margin so the centring isn't skewed.
+main .entry-text > p:last-child {
+  margin-bottom: 0;
+}
+
+// Phones: stack the thumbnail above the text.
+@media (max-width: 480px) {
+  main .entry {
+    grid-template-columns: 1fr;
+  }
+
+  main .entry > p:first-child {
+    grid-row: auto;
+    margin-bottom: 10px;
+  }
+
+  main .entry > p:not(:first-child) {
+    grid-column: 1;
+  }
+
+  main .entry.wide {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  // In a column the 200px flex-basis would become a height, leaving a gap
+  // under short images.
+  main .entry.wide > p:first-child {
+    flex-basis: auto;
+  }
 }

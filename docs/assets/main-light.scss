@@ -16,3 +16,24 @@ $mobile-font-size: 15px;
 @import "code";
 @import "images";
 
+// In-text links (inside paragraphs) and footer links: navy, no underline.
+// The menu keeps the theme's style. The theme's a:hover (more specific)
+// still inverts links to white on black.
+main p a,
+footer a {
+  color: #1e2f5c;
+  text-decoration: none;
+}
+
+// Homepage blog list: navy, no underline. This selector outranks the theme's
+// a:hover, so the white-on-black hover is restated here.
+main .post-list a {
+  color: #1e2f5c;
+  text-decoration: none;
+}
+
+main .post-list a:hover {
+  color: var(--background-color);
+  background-color: var(--base-color);
+}
+

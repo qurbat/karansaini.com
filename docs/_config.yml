@@ -39,6 +39,7 @@ sass:
 
 header_pages:
   - index.md
+  - about.md
   - press.md
   - work.md
   - writing.md
