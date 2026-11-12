@@ -1,0 +1,9 @@
+{%- comment -%}
+ASCII self-portrait (150x98), from ascii-portrait.pdf page 2.
+Styles: _sass/ascii-portrait.scss. Enlarge behaviour: assets/ascii-portrait.js
+(both external because the theme's CSP blocks inline styles and scripts).
+{%- endcomment -%}
+<figure class="ascii-portrait">
+<pre role="img" aria-label="ASCII-art self-portrait of Karan Saini">{% include ascii-portrait.txt %}</pre>
+</figure>
+<script src="{{ '/assets/ascii-portrait.js' | relative_url }}" defer></script>

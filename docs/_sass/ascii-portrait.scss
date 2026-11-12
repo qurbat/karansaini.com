@@ -1,0 +1,69 @@
+/**
+ * ASCII self-portrait (About page)
+ *
+ * 150 columns x 98 rows. The font size is derived from the figure's width
+ * (container query units), so all 150 columns always fit exactly and the art
+ * scales like an image. Source Code Pro glyphs are 0.6em wide, so
+ * 150 columns = 90em, i.e. 1em = width / 90. Rows are 1.2em, so the art is
+ * 117.6em tall.
+ *
+ * min() is written as an interpolated string because GitHub Pages compiles
+ * with libsass, which tries to evaluate min() itself and fails on mixed units.
+ */
+
+.ascii-portrait {
+  container-type: inline-size;
+  float: right;
+  width: 240px;
+  margin: 4px 0 12px 24px;
+}
+
+.ascii-portrait pre,
+.ascii-portrait-full pre {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  white-space: pre;
+  font-family: "Source Code Pro", monospace;
+  line-height: 1.2 !important;
+  letter-spacing: 0;
+  font-variant-ligatures: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  color: var(--text-color);
+  background: transparent;
+}
+
+// !important plus extra specificity beats the theme's phone rule
+// `* { font-size: 15px !important }`.
+main .ascii-portrait pre {
+  font-size: calc(100cqi / 90) !important;
+  cursor: zoom-in;
+}
+
+// Full-screen view: fit whichever viewport dimension is tighter.
+dialog.ascii-portrait-full {
+  max-width: none;
+  max-height: none;
+  padding: 16px;
+  border: var(--border);
+  background: var(--background-color);
+  cursor: zoom-out;
+}
+
+dialog.ascii-portrait-full::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+dialog.ascii-portrait-full pre {
+  font-size: #{"min(calc((100vw - 48px) / 90), calc((100vh - 48px) / 117.6))"} !important;
+  font-size: #{"min(calc((100vw - 48px) / 90), calc((100dvh - 48px) / 117.6))"} !important;
+}
+
+// Phones and narrow windows: still floated right, just narrower.
+@media (max-width: 640px) {
+  .ascii-portrait {
+    width: 42%;
+    margin: 4px 0 8px 14px;
+  }
+}

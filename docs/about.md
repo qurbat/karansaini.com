@@ -4,6 +4,8 @@ author: Karan Saini
 permalink: /about/
 layout: page
 ---
+{% include ascii-portrait.html %}
+
 I am a security researcher and technologist based in Bangalore, India.
 
 I have a dual focus across technology and policy. My research interests include network and application security, privacy, and Internet measurement.

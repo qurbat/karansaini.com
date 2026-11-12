@@ -54,12 +54,12 @@ main .entry.wide {
   margin-bottom: 24px;
 }
 
-// Separate consecutive entries with a centred rule of short dashes.
+// Separate consecutive entries with a full-width rule of short dashes.
 // Drawn as a background so it doesn't become a flex item.
 main .entry.wide + .entry.wide {
   padding-top: 24px;
   background: repeating-linear-gradient(to right, var(--base-color) 0 5px, transparent 5px 10px)
-    top center / 80% 1px no-repeat;
+    top left / 100% 1px no-repeat;
 }
 
 main .entry.wide > p:first-child {
