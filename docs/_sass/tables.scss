@@ -1,0 +1,10 @@
+/**
+ * Tables
+ *
+ * The theme gives tables no bottom margin, so the paragraph after one sits
+ * right against it. Match the spacing paragraphs get.
+ */
+
+main table {
+  margin-bottom: 1em;
+}
