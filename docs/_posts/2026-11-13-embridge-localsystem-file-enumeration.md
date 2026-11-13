@@ -96,7 +96,7 @@ Therefore, "a browser that does not enforce LNA" is -- for a LAN-hosted page, wh
 | HTTPS, private LAN IP -> loopback | allowed, no prompt | allowed, no prompt |
 | Public origin -> loopback | blocked (LNA) | blocked (LNA) |
 
-LNA only blocks a page served from the public internet, which is not the attack described above, nor the one described in eMudhra's own advisory. Chromium does intend to enforce LNA for local-to-loopback requests at some point ([WICG/local-network-access#17](https://github.com/WICG/local-network-access/issues/17)), but no current version of Chrome or Edge does this.
+LNA only blocks a page served from the public internet, which is not the attack described above, nor the one described in eMudhra's advisory. Chromium does intend to enforce LNA for local-to-loopback requests at some point ([WICG/local-network-access#17](https://github.com/WICG/local-network-access/issues/17)), but no current version of Chrome or Edge does this.
 
 I agree that the scope of this issue is narrow. The attacker needs to serve a page on the victim's LAN, and the victim needs to open it. However, the advisory disingenuously tries to narrow the scope further by listing LNA as a precondition, implying that in order for the attack to work, the victim would have had to **1.** disable an enabled-by-default browser protection, *or* **2.** use an insecure browser.
 
