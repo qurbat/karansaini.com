@@ -1,9 +1,20 @@
 {%- comment -%}
 ASCII self-portrait (150x98), from ascii-portrait.pdf page 2.
+Rendered as SVG text rather than a <pre>: each row is set at a fixed 10px in a
+900x1176 viewBox (6 units per column, 12 per row) and pinned to its exact width
+with textLength, so the art scales like an image. Sizing via font-size broke
+under browser zoom, where the minimum font size clamped glyphs and the rows
+overflowed and got clipped.
 Styles: _sass/ascii-portrait.scss. Enlarge behaviour: assets/ascii-portrait.js
 (both external because the theme's CSP blocks inline styles and scripts).
 {%- endcomment -%}
+{%- capture art %}{% include ascii-portrait.txt %}{% endcapture -%}
+{%- capture nl %}
+{% endcapture -%}
+{%- assign rows = art | split: nl -%}
 <figure class="ascii-portrait">
-<pre role="img" aria-label="ASCII-art self-portrait of Karan Saini">{% include ascii-portrait.txt %}</pre>
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 900 {{ rows.size | times: 12 }}" role="img" aria-label="ASCII-art self-portrait of Karan Saini">
+{%- for row in rows %}<text x="0" y="{{ forloop.index | times: 12 | minus: 2.5 }}" textLength="900" lengthAdjust="spacingAndGlyphs">{{ row | xml_escape }}</text>{% endfor -%}
+</svg>
 </figure>
 <script src="{{ '/assets/ascii-portrait.js' | relative_url }}" defer></script>
