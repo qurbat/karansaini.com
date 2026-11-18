@@ -18,6 +18,10 @@ While the government and telecom companies drag their feet on bringing transpare
 
 ## Application Security
 
+["CERT-In flags fresh eMudhra vulnerability; researcher says reported 'more serious flaws'" - **November 16, 2026** - moneycontrol.com](https://www.moneycontrol.com/news/business/cert-in-flags-fresh-emudhra-vulnerability-researcher-says-reported-more-serious-flaws-14081037.html)
+
+The latest flaw in eMudhra’s emBridge utility could expose file and folder names on users’ computers.
+
 ["Researcher Uncovered Serious Flaw in Delhi Police Digital Infrastructure" - **June 25, 2020** - gadgets.ndtv.com](https://gadgets.ndtv.com/internet/news/dehli-police-digital-vulnerability-patched-bengaluru-researcher-2252068)
 
 A significant chunk of Delhi police’s online infrastructure was accessible without authorisation, and it took seven months for this to be fixed.
@@ -25,6 +29,10 @@ A significant chunk of Delhi police’s online infrastructure was accessible wit
 ["The Election Commission Website Has Put Your Phone Number And Email Address At Risk" - **December 23, 2019** - huffpost.com](https://www.huffpost.com/archive/in/entry/election-commission-website-leaked-phone-number-email-address_in_5df9b653e4b0d6c84b7588c8)
 
 A security flaw in the ECI website put at risk not just the electoral roll, but all the other information gathered about voters as well—potentially putting the personal information of every Indian at risk.
+
+["Aadhaar security failure: Government webpages provide unsecured access to demographic authentication" - **June 22, 2018** - caravanmagazine.in](https://caravanmagazine.in/science-technology/aadhaar-security-failure-government-webpages-provide-unsecured-access-to-demographic-authentication)
+
+Over 70 subdomains under a GoI website are providing access to demographic-authentication services without requiring identity verification.
 
 ["Security researcher finds serious flaw in Aadhaar system" - **March 24, 2018** - scroll.in](https://scroll.in/latest/873159/security-researcher-finds-serious-flaw-in-aadhaar-system-that-leaves-data-open-for-download-report)
 
