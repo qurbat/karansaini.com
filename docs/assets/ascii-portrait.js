@@ -4,7 +4,7 @@
   var fig = document.querySelector(".ascii-portrait");
   if (!fig || typeof HTMLDialogElement !== "function") return;
 
-  var src = fig.querySelector("pre");
+  var src = fig.querySelector("svg");
   var dlg = document.createElement("dialog");
   dlg.className = "ascii-portrait-full";
   dlg.setAttribute("aria-label", "Self-portrait, enlarged");

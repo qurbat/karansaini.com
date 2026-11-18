@@ -39,3 +39,19 @@ main .post-list a:hover {
   background-color: var(--base-color);
 }
 
+
+// Mobile nav: six links plus the theme's 10px left margins overflow ~324px
+// content widths and wrap "Media" onto a second line. Lay them out in one
+// non-wrapping flex row that spreads evenly across the width instead.
+@media (max-width: 500px) {
+  .menu ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .menu ul li {
+    margin-left: 0;
+    white-space: nowrap;
+  }
+}

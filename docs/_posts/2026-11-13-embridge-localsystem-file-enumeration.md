@@ -86,7 +86,7 @@ I don't fully agree about directory structures and file names being "non-sensiti
 
 ## Local Network Access restrictions
 
-LNA classifies requests by the address space of the page and of the target. A page served from a LAN address is a *local* origin; `localhost.emudhra.com` resolves to `127.0.0.1`, which is a *loopback* target. At present, browsers do not gate local-to-loopback requests. The [WICG LNA specification](https://wicg.github.io/local-network-access/) notes that "Chromium only implements Local Network Access restrictions for public to local or loopback requests, and does not enforce the permission for cross-origin local requests." Microsoft's documentation for Edge states that "LNA restrictions don't yet apply to local→local or local→loopback requests."
+LNA classifies requests by the address space of the page and of the target. A page served from a LAN address is a *local* origin; `localhost.emudhra.com` resolves to `127.0.0.1`, which is a *loopback* target. At present, browsers do not gate local-to-loopback requests. The [WICG LNA specification](https://wicg.github.io/local-network-access/) notes that "Chromium only implements Local Network Access restrictions for public to local or loopback requests, and does not enforce the permission for cross-origin local requests." Microsoft's documentation for Edge states that "LNA restrictions don't yet apply to local->local or local->loopback requests."
 
 Therefore, "a browser that does not enforce LNA" is -- for a LAN-hosted page, which is a stated precondition for the attack -- any current build of Chrome, Firefox, or Edge, with default configuration. I also verified this independently instead of relying solely on documentation.
 
@@ -96,11 +96,13 @@ Therefore, "a browser that does not enforce LNA" is -- for a LAN-hosted page, wh
 | HTTPS, private LAN IP -> loopback | allowed, no prompt | allowed, no prompt |
 | Public origin -> loopback | blocked (LNA) | blocked (LNA) |
 
-LNA only blocks a page served from the public internet, which is not the attack described above, nor the one described in eMudhra's own advisory. Chromium does intend to enforce LNA for local-to-loopback requests at some point ([WICG/local-network-access#17](https://github.com/WICG/local-network-access/issues/17)), but no current version of Chrome or Edge does this.
+LNA only blocks a page served from the public internet, which is not the attack described above, nor the one described in eMudhra's advisory. Chromium does intend to enforce LNA for local-to-loopback requests at some point ([WICG/local-network-access#17](https://github.com/WICG/local-network-access/issues/17)), but no current version of Chrome or Edge does this.
 
 I agree that the scope of this issue is narrow. The attacker needs to serve a page on the victim's LAN, and the victim needs to open it. However, the advisory disingenuously tries to narrow the scope further by listing LNA as a precondition, implying that in order for the attack to work, the victim would have had to **1.** disable an enabled-by-default browser protection, *or* **2.** use an insecure browser.
 
-The advisory also does not mention the non-browser path. A local, unprivileged process can list `C:\Windows\System32\config` through the service without a browser or a LAN page being involved. The eMudhra advisory doesn't credit me either, whereas [CERT-In's vulnerability note](https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0549) and the [CVE listing](https://www.cve.org/CVERecord?id=CVE-2026-125659) do.
+The advisory also does not mention the non-browser path. A local, unprivileged process can list privileged paths through the service without a browser or a LAN page being involved. 
+
+As an aside: the eMudhra advisory, for some reason, does not credit me, while [CERT-In's vulnerability note](https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0549) and the [CVE listing](https://www.cve.org/CVERecord?id=CVE-2026-125659) do.
 
 ## robots.txt
 

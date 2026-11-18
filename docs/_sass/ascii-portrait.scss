@@ -1,47 +1,47 @@
 /**
  * ASCII self-portrait (About page)
  *
- * 150 columns x 98 rows. The font size is derived from the figure's width
- * (container query units), so all 150 columns always fit exactly and the art
- * scales like an image. Source Code Pro glyphs are 0.6em wide, so
- * 150 columns = 90em, i.e. 1em = width / 90. Rows are 1.2em, so the art is
- * 117.6em tall.
+ * 150 columns x 98 rows, drawn as SVG <text> rows in a 900x1176 viewBox
+ * (see _includes/ascii-portrait.html). The SVG scales like an image, so the
+ * text's font-size never depends on the box width and can't be clamped by a
+ * browser minimum font size when zoomed in.
  *
  * min() is written as an interpolated string because GitHub Pages compiles
  * with libsass, which tries to evaluate min() itself and fails on mixed units.
  */
 
 .ascii-portrait {
-  container-type: inline-size;
   float: right;
   width: 240px;
   margin: 4px 0 12px 24px;
 }
 
-.ascii-portrait pre,
-.ascii-portrait-full pre {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  white-space: pre;
-  font-family: "Source Code Pro", monospace;
-  line-height: 1.2 !important;
-  letter-spacing: 0;
-  font-variant-ligatures: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
+.ascii-portrait svg,
+.ascii-portrait-full svg {
+  display: block;
+  width: 100%;
+  height: auto;
   color: var(--text-color);
-  background: transparent;
 }
 
-// !important plus extra specificity beats the theme's phone rule
-// `* { font-size: 15px !important }`.
-main .ascii-portrait pre {
-  font-size: calc(100cqi / 90) !important;
+// Fixed size in viewBox units. !important beats the theme's phone rule
+// `* { font-size: 15px !important }`; textLength keeps the width exact anyway.
+.ascii-portrait svg text,
+.ascii-portrait-full svg text {
+  font-family: "Source Code Pro", monospace;
+  font-size: 10px !important;
+  font-variant-ligatures: none;
+  letter-spacing: 0;
+  white-space: pre;
+  fill: currentColor;
+}
+
+main .ascii-portrait svg {
   cursor: zoom-in;
 }
 
-// Full-screen view: fit whichever viewport dimension is tighter.
+// Full-screen view: fit whichever viewport dimension is tighter
+// (art aspect ratio is 900:1176).
 dialog.ascii-portrait-full {
   max-width: none;
   max-height: none;
@@ -55,9 +55,9 @@ dialog.ascii-portrait-full::backdrop {
   background: rgba(0, 0, 0, 0.6);
 }
 
-dialog.ascii-portrait-full pre {
-  font-size: #{"min(calc((100vw - 48px) / 90), calc((100vh - 48px) / 117.6))"} !important;
-  font-size: #{"min(calc((100vw - 48px) / 90), calc((100dvh - 48px) / 117.6))"} !important;
+dialog.ascii-portrait-full svg {
+  width: #{"min(calc(100vw - 48px), calc((100vh - 48px) * 0.7653))"};
+  width: #{"min(calc(100vw - 48px), calc((100dvh - 48px) * 0.7653))"};
 }
 
 // Phones and narrow windows: still floated right, just narrower.
